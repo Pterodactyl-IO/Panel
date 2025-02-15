@@ -192,6 +192,7 @@ export default ({ style, initialContent, filename, mode, fetchContent, onContent
 
     useEffect(() => {
         editor && editor.setValue(initialContent || '');
+        editor && editor.getDoc().clearHistory();
     }, [editor, initialContent]);
 
     useEffect(() => {
